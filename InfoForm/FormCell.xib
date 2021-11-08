@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FormCell" rowHeight="144" id="KGk-i7-Jjw" customClass="FormCell" customModule="InfoForm" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="364" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ad-Su-Obo">
+                        <rect key="frame" x="0.0" y="0.0" width="304" height="108"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecH-pg-OMz">
+                                <rect key="frame" x="8" y="15" width="181" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="8jL-tx-6gW"/>
+                                    <constraint firstAttribute="width" constant="181" id="wb6-Ud-Tl1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Возраст" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KZZ-D2-Tyt">
+                                <rect key="frame" x="8" y="59" width="181" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Uq5-hR-gKU"/>
+                                    <constraint firstAttribute="width" constant="181" id="aup-a9-aeo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqJ-SM-hrz">
+                                <rect key="frame" x="220" y="17" width="58" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Удалить"/>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Zls-Or-JXs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="304" id="KK8-QW-sZM"/>
+                            <constraint firstItem="WqJ-SM-hrz" firstAttribute="centerY" secondItem="ecH-pg-OMz" secondAttribute="centerY" id="Qgp-qb-dZd"/>
+                            <constraint firstItem="KZZ-D2-Tyt" firstAttribute="top" secondItem="ecH-pg-OMz" secondAttribute="bottom" constant="10" id="db9-Fx-Xdp"/>
+                            <constraint firstItem="KZZ-D2-Tyt" firstAttribute="leading" secondItem="ecH-pg-OMz" secondAttribute="leading" id="kaG-BU-EHV"/>
+                            <constraint firstAttribute="height" constant="108" id="neg-XN-b8s"/>
+                            <constraint firstItem="ecH-pg-OMz" firstAttribute="leading" secondItem="0Ad-Su-Obo" secondAttribute="leading" constant="8" id="owX-zc-cat"/>
+                            <constraint firstItem="ecH-pg-OMz" firstAttribute="top" secondItem="0Ad-Su-Obo" secondAttribute="top" constant="15" id="q3m-2X-HKy"/>
+                            <constraint firstItem="WqJ-SM-hrz" firstAttribute="leading" secondItem="ecH-pg-OMz" secondAttribute="trailing" constant="31" id="trG-Ob-Mu3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0Ad-Su-Obo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Wh1-p2-ZVK"/>
+                    <constraint firstItem="0Ad-Su-Obo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wWh-oG-RbG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ageTextField" destination="KZZ-D2-Tyt" id="7Yq-PC-cLc"/>
+                <outlet property="nameTextField" destination="ecH-pg-OMz" id="P49-o5-qwP"/>
+            </connections>
+            <point key="canvasLocation" x="162.31884057971016" y="129.24107142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
